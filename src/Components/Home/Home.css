@@ -1,0 +1,107 @@
+/* General Styles for Home Container */
+.home-container {
+  background: url('../images/home8.png'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+/* Button Styles */
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #edf1f6;
+  color: rgb(24, 24, 24);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #456138;
+}
+
+.btn:active {
+  background-color: #004080;
+}
+
+/* Styles for Component Sections */
+.hint, .hint1, .hint2 {
+  margin: 20px 0;
+  text-align: center;
+  z-index: 2; /* Ensures that these components are on top of the background */
+}
+
+/* Gallery Container */
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Space between images */
+  flex-wrap: nowrap; /* Prevent images from wrapping to the next line */
+  margin-top: 20px;
+}
+
+/* Individual Image Styles */
+.gallery-item {
+  flex: 0 0 auto; /* Prevent items from growing or shrinking */
+  max-width: 150px; /* Adjust based on your design */
+}
+
+/* Image Styles */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Styles for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .home-container {
+    padding: 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .hint, .hint1, .hint2 {
+    margin: 10px 0;
+  }
+
+  .gallery-container {
+    flex-direction: column; /* Stack images vertically on smaller screens */
+    align-items: center; /* Center images vertically */
+    gap: 10px; /* Reduce space between images */
+  }
+
+  .gallery-item {
+    max-width: 120px; /* Adjust based on smaller screens */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media screen and (max-width: 480px) {
+  .btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .gallery-item {
+    max-width: 100px; /* Adjust based on very small screens */
+  }
+}
